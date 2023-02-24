@@ -14,3 +14,16 @@ docker build -t backend-flask ./backend-flask
 docker build -t frontend-react-js ./frontend-react-js
 docker run -p 3000:3000 -d frontend-react-js
 ```
+
+
+## Docker commands used for compose
+
+```
+docker compose up
+docker-compose up
+```
+
+Troubleshooting:
+Successfully ran the frontend and backend containers individually without an hitch.
+
+However, the posts was not getting populated initially on running Docker compose. To resolve this, I stopped and deleted the existing containers and images and use Docker Compose to re-build the images and run the containers.
