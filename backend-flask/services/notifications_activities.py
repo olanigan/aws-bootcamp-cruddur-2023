@@ -1,9 +1,7 @@
 from datetime import datetime, timedelta, timezone
 class NotificationsActivities:
   def run():
-    console.log("Enter Notif Activity")
     now = datetime.now(timezone.utc).astimezone()
-    console.log("Current Date", now)
     results = [{
       'uuid': '68f126b0-1ceb-4a33-88be-d90fa7109eee',
       'handle':  'Benjamin Yahya',
