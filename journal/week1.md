@@ -27,3 +27,11 @@ Troubleshooting:
 Successfully ran the frontend and backend containers individually without an hitch.
 
 However, the posts was not getting populated initially on running Docker compose. To resolve this, I stopped and deleted the existing containers and images and use Docker Compose to re-build the images and run the containers.
+
+
+## Postgres
+
+Postgres was added and the following command was used for verification:
+```
+psql -Upostgres --host localhost
+```
