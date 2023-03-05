@@ -36,8 +36,8 @@ processor = BatchSpanProcessor(OTLPSpanExporter())
 provider.add_span_processor(processor)
 
 #Show this in backend-flask app logs
-sample_processor = SimpleSpanProcessor(ConsoleSpanExporter())
-provider.add_span_processor(sample_processor)
+# sample_processor = SimpleSpanProcessor(ConsoleSpanExporter())
+# provider.add_span_processor(sample_processor)
 
 
 trace.set_tracer_provider(provider)
@@ -97,6 +97,7 @@ def data_create_message():
   return
 
 @app.route("/api/activities/home", methods=['GET'])
+@xray_recorder.capture('activities_home')
 def data_home():
   data = HomeActivities.run()
   return data, 200
@@ -107,6 +108,7 @@ def data_notification():
   return data, 200
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
+@xray_recorder.capture('activities_users')
 def data_handle(handle):
   model = UserActivities.run(handle)
   if model['errors'] is not None:
