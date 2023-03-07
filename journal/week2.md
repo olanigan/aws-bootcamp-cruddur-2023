@@ -18,5 +18,6 @@ Segments
 
 ### Rollbar
 
+![image](https://user-images.githubusercontent.com/2639639/223310644-c7ad0d2d-f885-4214-b84e-a6a8eab2c219.png)
 
 
