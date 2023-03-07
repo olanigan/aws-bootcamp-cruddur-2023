@@ -38,13 +38,13 @@ import rollbar.contrib.flask
 from flask import got_request_exception
 
 # Configuring Logger to Use CloudWatch
-LOGGER = logging.getLogger(__name__)
-LOGGER.setLevel(logging.DEBUG)
-console_handler = logging.StreamHandler()
+# LOGGER = logging.getLogger(__name__)
+# LOGGER.setLevel(logging.DEBUG)
+# console_handler = logging.StreamHandler()
+# LOGGER.addHandler(console_handler)
 # cw_handler = watchtower.CloudWatchLogHandler(log_group='backend')
-LOGGER.addHandler(console_handler)
-# LOGGER.addHandler(cw_handler)
-LOGGER.info("test logger")
+# # LOGGER.addHandler(cw_handler)
+# LOGGER.info("test logger")
 
 
 # Initialize tracing and an exporter that can send data to Honeycomb
@@ -79,9 +79,8 @@ cors = CORS(
   methods="OPTIONS,GET,HEAD,POST"
 )
 
-
-#@app.after_request
-#def after_request(response):
+# @app.after_request
+# def after_request(response):
 #    timestamp = strftime('[%Y-%b-%d %H:%M]')
 #    LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
 #    return response
@@ -147,6 +146,7 @@ def data_create_message():
 @xray_recorder.capture('activities_home')
 def data_home():
   data = HomeActivities.run()
+  #rollbar.report_message('Home Activities loaded', 'info')
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])

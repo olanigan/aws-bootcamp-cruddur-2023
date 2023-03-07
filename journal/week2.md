@@ -1,7 +1,7 @@
 # Week 2 — Distributed Tracing
 
 
-### Instrument X-Ray
+### X-Ray
 
 <em>Service Map<em>
 
@@ -14,5 +14,9 @@ Traces
 Segments
 
 ![Screen Shot 2023-03-04 at 11 29 48 PM](https://user-images.githubusercontent.com/2639639/222941790-42283cae-9228-4829-83d8-f81aa9ad7641.png)
+
+
+### Rollbar
+
 
 
