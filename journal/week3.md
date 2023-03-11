@@ -1,5 +1,11 @@
 # Week 3 — Decentralized Authentication
 
+## Cognito SignUp 
+
+User created and confirmed in Cognito user pool
+
+<img width="997" alt="image" src="https://user-images.githubusercontent.com/2639639/224510336-7476fd41-b60a-43dc-99c4-f9918abb4a55.png">
+
 
 ### SignIn Page
 
