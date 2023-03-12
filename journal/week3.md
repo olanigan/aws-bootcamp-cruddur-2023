@@ -26,3 +26,8 @@ Sign-In successful with new passpord (after recovery)
 <img width="542" alt="image" src="https://user-images.githubusercontent.com/2639639/224510053-1e718496-b9b8-437b-97db-35d672ff6d5f.png">
 
 <img width="655" alt="image" src="https://user-images.githubusercontent.com/2639639/224510080-d0a33f9a-2499-4d71-ad64-121e55dd5728.png">
+
+
+### Backend Token validation
+
+![image](https://user-images.githubusercontent.com/2639639/224524335-63bc4b92-9bb2-467d-ab17-b30f05d6bb69.png)
